@@ -1,0 +1,76 @@
+<div class="container">
+
+<form [formGroup]="crudForm">
+  <div class="">
+    <div class="row">
+
+      <div class="form-group col-md-6">
+        <input type="text" formControlName="fName" class="form-control" placeholder="First Name" required>
+      </div>
+
+      <div class="form-group col-md-6">
+        <input type="text" formControlName="lName" class="form-control" placeholder="Last Name" required>
+      </div>
+      
+    </div>
+    <div class="row">
+
+      <div class="form-group col-md-6">
+        <input type="text" formControlName="address" class="form-control" placeholder="Address">
+      </div>
+
+      <div class="form-group col-md-6">
+        <select class="custom-select" formControlName="batch" required>
+          <option selected value="PPA">PPA</option>
+          <option value="LSP">LSP</option>
+          <option value="LB">LB</option>
+          <option value="SDK">SDK</option>
+          <option value="Angular">Angular</option> 
+        </select>
+      </div>
+
+    </div>
+    <hr>
+    <div class="row" *ngIf="!updateBtn">
+        <div class="col">
+            <button class="btn btn-outline-danger float-right" [disabled]="!crudForm.valid" (click)="save(); crudForm.reset()">Submit</button>
+          </div>
+    </div>  
+    <div class="row" *ngIf="updateBtn">
+        <div class="col">
+            <button class="btn btn-outline-danger float-right" [disabled]="!crudForm.valid" (click)="saveEdit(); crudForm.reset()">Update</button>
+          </div>
+    </div> 
+  </div>
+
+</form>
+</div>
+<hr>
+<div class="container">
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Id</th>
+        <th scope="col">First Name</th>
+        <th scope="col">Last Name</th>
+        <th scope="col">Address</th>
+        <th scope="col">Batch</th>
+        <th scope="col">Action</th>
+        
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let data of saveData; let i=index">
+        <td>{{i+1}}</td>
+        <td>{{data.fName}}</td>
+        <td>{{data.lName}}</td>
+        <td>{{data.address}}</td>
+        <td>{{data.batch}}</td>
+        <td>
+            <i class="fa fa-pencil" (click)="editRow(i)" style="color:blue"></i> &nbsp;
+            <i class="fa fa-trash"  (click)="delete(i)" style="color:red"></i>
+        </td>        
+      </tr>
+    </tbody>
+  </table>
+</div>
