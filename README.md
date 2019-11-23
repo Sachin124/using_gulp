@@ -4,13 +4,13 @@ This is Basic Application in Angular for Create, Delete, View, Update Operation 
 
 # On Development Build (Normal using ng-serve)
 
-![Alt text]On Development.png.png?raw=true "Title")
+![Alt text]On_Development.png.png?raw=true "Title")
 
 # Prod Build
 
 You can see production build on dist/crud folder you can run this app using http-server and see the network request without using Gulp
 
-![Alt text](prod build.png?raw=true "Title")
+![Alt text](prod_build.png?raw=true "Title")
 
 # After Using Gulp
 
