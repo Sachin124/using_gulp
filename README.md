@@ -4,7 +4,7 @@ This is Basic Application in Angular for Create, Delete, View, Update Operation 
 
 # On Development Build (Normal using ng-serve)
 
-![Alt text]on_dev.png?raw=true "Title")
+![Alt text](on_dev.png?raw=true "Title")
 
 # Prod Build
 
