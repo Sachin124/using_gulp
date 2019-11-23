@@ -28,3 +28,5 @@ type command in terminal
 # npm install
 # ng serve
 # open in browser localhost:4200
+# using_gulp
+Angular application after the gulp 
