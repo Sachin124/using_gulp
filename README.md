@@ -10,6 +10,8 @@ You can see production build on dist/crud folder you can run this app using http
 
 You can see Gulp build on gulpbuild folder you can run this app using http-server and see the network request using Gulp
 
+![Alt text](gulp.png?raw=true "Title")
+
 # How to Run this Project
 
 ~ Open This Project in Visual Studio Code.
